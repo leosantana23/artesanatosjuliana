@@ -8,5 +8,4 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Comandos
 
- Acrescentar `?static` à URL desliga todas as animações (mesmo efeito de `prefers-reduced-motion`)
  Confirmar se as fotos são reais antes de utilizá-las.
