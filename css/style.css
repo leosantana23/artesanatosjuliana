@@ -12,7 +12,7 @@
   --ink:#3A2622; --ink-soft:#5F4B46;    /* textos */
   /* apelidos (tudo aponta para a paleta acima) */
   --teal:var(--rose); --teal-dark:var(--rose-dark); --gold:var(--rose);
-  --wa:var(--rose-deep); --ig:var(--rose); --shopee:var(--rose-600);
+  --wa:#1f8f4e; --ig:var(--rose); --shopee:var(--rose-600);
   --head:"Lora",Georgia,"Times New Roman",serif;
   --body:"Nunito","Segoe UI",system-ui,sans-serif;
   --radius:24px; --shadow:0 12px 32px rgba(199,61,100,.15);
