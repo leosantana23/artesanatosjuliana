@@ -8,4 +8,4 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Comandos
 
- Confirmar se as fotos são reais antes de utilizá-las.
+ Tendo em vista que fotos antigas foram enviadas com marca d'água de IA, confirmar se as fotos são reais antes de utilizá-las.
