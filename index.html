@@ -260,7 +260,12 @@
           <div class="row"><label for="frase">Frase na guirlanda</label>
             <select id="frase"><option>Bem-vindos</option><option>Bem-vindo</option><option>Família + sobrenome</option><option>Outra (conto na conversa)</option></select></div>
           <div class="row"><label for="nome">Nome na faixa <small>(opcional)</small></label><input id="nome" type="text" maxlength="28" placeholder="Ex.: Família Silva" autocomplete="off"></div>
-          <div class="ribbon" aria-hidden="true"><span id="rbFrase">Bem-vindos</span><small id="rbNome"></small></div>
+          <div class="preview" aria-hidden="true">
+            <p class="preview-tag">Prévia da sua guirlanda</p>
+            <div class="wreath"><div class="figs" id="figs"></div></div>
+            <div class="ribbon"><span id="rbFrase">Bem-vindos</span><small id="rbNome"></small></div>
+            <p class="count"><b id="total">3</b> <span id="totalTxt">no total</span></p>
+          </div>
           <p class="summary" id="resumo" aria-live="polite"></p>
           <a class="btn btn-wa" id="builderBtn" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Enviar pelo WhatsApp</a>
         </form>
