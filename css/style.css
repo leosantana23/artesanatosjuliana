@@ -426,23 +426,6 @@ p{text-wrap:pretty}
 .row label small{font-weight:600;color:var(--ink-soft)}
 .ribbon{margin:14px auto 0;max-width:330px;text-align:center;background:linear-gradient(180deg,#fff,var(--blush));padding:14px 34px;clip-path:polygon(0 0,100% 0,95% 50%,100% 100%,0 100%,5% 50%);filter:drop-shadow(0 4px 10px rgba(199,45,93,.18))}
 .ribbon span{display:block;font:italic 700 1.55rem var(--head);color:var(--ink);line-height:1.2}
-.preview{margin:18px 0 0;text-align:center}
-.preview-tag{margin:0 0 8px;font:800 .8rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
-.wreath{position:relative;padding:22px 18px 12px;border-radius:28px;background:radial-gradient(circle at 50% 30%,#fff,var(--blush-2));border:4px dashed var(--teal);box-shadow:inset 0 0 0 6px #fff}
-.figs{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:2px 0;min-height:84px}
-.fig{display:block;margin:0 -4px;transition:transform .2s}
-.fig svg{display:block;filter:drop-shadow(0 3px 3px rgba(0,0,0,.15))}
-.fig.adult svg{width:48px;height:67px}
-.fig.kid svg{width:36px;height:50px}
-.fig.pet svg{width:40px;height:40px}
-.fig:hover{transform:translateY(-4px) rotate(-3deg)}
-.fig.pop{animation:figpop .45s cubic-bezier(.3,1.6,.5,1)}
-@keyframes figpop{from{transform:scale(0) rotate(-20deg)}to{transform:none}}
-.empty{align-self:center;color:var(--ink-soft);font-weight:700}
-.preview .ribbon{margin-top:-6px;position:relative}
-.count{margin:10px 0 0;color:var(--ink-soft);font-weight:700}
-.count b{font:700 1.3rem var(--head);color:var(--rose-dark)}
-@media (prefers-reduced-motion:reduce){.fig.pop{animation:none}.fig{transition:none}}
 .ribbon small{display:block;min-height:1.2em;margin-top:2px;font:800 .95rem var(--body);color:var(--rose-dark);letter-spacing:.04em;text-transform:uppercase}
 
 @media (max-width:700px){

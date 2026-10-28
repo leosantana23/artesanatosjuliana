@@ -263,40 +263,9 @@
   /* montador de pedido */
   var st = { adultos: 2, criancas: 1, pets: 0 };
   function plural(n, s, p) { return n + ' ' + (n === 1 ? s : p); }
-  var CLOTHES = ['#C72D5D', '#2F8F8B', '#E9A23B', '#7C5CBF', '#4C9BD6', '#E0736A'];
-  var HAIRS = ['#5B3A29', '#2B2B2B', '#B5651D', '#E8C16A'];
-  function fig(kind, i) {
-    var c = CLOTHES[i % CLOTHES.length], h = HAIRS[(i * 3 + 1) % HAIRS.length], s;
-    if (kind === 'pet') {
-      s = '<svg viewBox="0 0 40 40"><ellipse cx="20" cy="27" rx="13" ry="10" fill="#D9A066"/><circle cx="20" cy="15" r="9" fill="#E8B27A"/>' +
-        '<path d="M12 9 L10 18 L16 12Z M28 9 L30 18 L24 12Z" fill="#B97A3E"/><circle cx="17" cy="15" r="1.5" fill="#333"/><circle cx="23" cy="15" r="1.5" fill="#333"/><ellipse cx="20" cy="19" rx="2.2" ry="1.5" fill="#333"/></svg>';
-    } else {
-      s = '<svg viewBox="0 0 40 56"><path d="M7 56 Q7 31 20 31 Q33 31 33 56Z" fill="' + c + '"/><circle cx="20" cy="18" r="10" fill="#F6CFA8"/>' +
-        '<path d="M10 18 Q10 6 20 6 Q30 6 30 18 Q25 11 20 11 Q15 11 10 18Z" fill="' + h + '"/><circle cx="16.5" cy="19" r="1.3" fill="#333"/><circle cx="23.5" cy="19" r="1.3" fill="#333"/>' +
-        '<path d="M17 23.5 Q20 26 23 23.5" stroke="#B5524A" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>';
-    }
-    return '<span class="fig ' + kind + '">' + s + '</span>';
-  }
-  var prevSt = { adultos: 2, criancas: 1, pets: 0 }, firstRender = true;
-  function renderFigs() {
-    var html = '', n = 0, grew = null;
-    ['adultos', 'criancas', 'pets'].forEach(function (k) {
-      var kind = k === 'adultos' ? 'adult' : k === 'criancas' ? 'kid' : 'pet';
-      for (var j = 0; j < st[k]; j++, n++) html += fig(kind, n);
-      if (st[k] > prevSt[k]) grew = kind + ':' + (st[k] - 1);
-    });
-    var box = $('#figs'); box.innerHTML = html || '<span class="empty">Adicione pessoas ou pets</span>';
-    if (grew && !firstRender && !reduce) {
-      var idx = 0, parts = grew.split(':'), target = null;
-      $$('.fig', box).forEach(function (f) { if (f.classList.contains(parts[0])) { if (idx === +parts[1]) target = f; idx++; } });
-      if (target) target.classList.add('pop');
-    }
-    prevSt = { adultos: st.adultos, criancas: st.criancas, pets: st.pets }; firstRender = false;
-    $('#total').textContent = n; $('#totalTxt').textContent = n === 1 ? 'personagem em feltro' : 'personagens em feltro';
-  }
   function build() {
     var frase = $('#frase').value, nome = $('#nome').value.trim();
-    $('#rbFrase').textContent = frase; $('#rbNome').textContent = nome; renderFigs();
+    $('#rbFrase').textContent = frase; $('#rbNome').textContent = nome;
     var txt = plural(st.adultos, 'adulto', 'adultos') + ', ' + plural(st.criancas, 'criança', 'crianças') + ' e ' + plural(st.pets, 'pet', 'pets');
     $('#resumo').textContent = 'Sua guirlanda: ' + txt + ' · frase: ' + frase + (nome ? ' — ' + nome : '');
     var msg = 'Olá, Juliana! Quero encomendar uma guirlanda de família.\nPessoas e pets: ' + txt + '.\nFrase: ' + frase + (nome ? ' — ' + nome : '') + '.\nPosso te contar os detalhes de cada um?';
