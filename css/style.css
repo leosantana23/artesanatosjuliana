@@ -454,7 +454,7 @@ p{text-wrap:pretty}
 }
 
 /* guirlanda de família: personalizações em destaque e hierarquia (montador e foto) */
-.pers{font-family:inherit;font-weight:inherit;font-size:1.25em;color:var(--rose);line-height:1.2}
+.pers{font-family:var(--head);font-weight:700;font-size:1.25em;color:var(--rose);line-height:1.2}
 .family .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
 .family .pics .hotwrap>img{border:6px solid #fff;box-shadow:0 22px 50px rgba(199,45,93,.28)}
 .family .builder{padding:34px;border:3px solid var(--rose-600);box-shadow:0 22px 50px rgba(199,45,93,.25)}
