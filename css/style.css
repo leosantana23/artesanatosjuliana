@@ -94,7 +94,7 @@ nav a.active{background:var(--rose);color:#fff}
 .trust{padding:0;margin-top:-44px;z-index:3}
 .trust ul{list-style:none;margin:0;padding:26px 18px;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
 .trust strong{display:block;font:700 2.3rem var(--head);color:var(--rose);line-height:1.1}
-.trust span.t{font-size:.95rem;color:var(--ink-soft);line-height:1.4;display:block;margin-top:4px}
+.trust span.t{font-size:1rem;color:var(--ink);line-height:1.4;display:block;margin-top:4px}
 @media (max-width:760px){.trust ul{grid-template-columns:repeat(2,1fr)}.trust strong{font-size:1.9rem}}
 
 /* ---------- vitrine ---------- */
@@ -214,17 +214,16 @@ dialog.lb::backdrop{background:rgba(58,38,34,.72)}
 /* ---------- destaque Shopee ---------- */
 .btn-lg{min-height:60px;padding:1rem 2rem;font-size:1.15rem}
 .btn-shopee.btn-lg{box-shadow:0 10px 24px rgba(199,45,93,.4)}
-.shopee-sec{padding:0 0 20px;margin-top:70px}
-.shopee-box{position:relative;overflow:hidden;background:linear-gradient(135deg,#E8527A,#C72D5D 60%,#A8244B);color:#fff;border-radius:32px;padding:44px 40px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:36px;align-items:center;box-shadow:0 18px 40px rgba(199,45,93,.3)}
-.shopee-box::after{content:"";position:absolute;right:-70px;top:-70px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.1)}
-.shopee-box .logo{width:130px;height:130px;border-radius:32px;background:#fff;color:var(--rose-600);display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.2)}
-.shopee-box .logo svg{width:84px;height:84px}
-.shopee-box h2{color:#fff;font-size:clamp(1.7rem,3.6vw,2.4rem)}
-.shopee-box p{margin:12px 0 0;font-size:1.12rem;max-width:640px;position:relative;z-index:1}
-.shopee-box .tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 22px;position:relative;z-index:1}
-.shopee-box .tags span{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);padding:4px 14px;border-radius:999px;font-weight:700;font-size:.95rem}
+.shopee-sec{padding:0 0 10px;margin-top:44px}
+.shopee-box{display:flex;align-items:center;gap:16px;background:linear-gradient(135deg,#E8527A,#C72D5D 60%,#A8244B);color:#fff;border-radius:20px;padding:12px 14px 12px 18px;box-shadow:0 8px 20px rgba(199,45,93,.25)}
+.shopee-box .logo{flex:none;width:44px;height:44px;border-radius:12px;background:#fff;color:var(--rose-600);display:grid;place-items:center}
+.shopee-box .logo svg{width:28px;height:28px}
+.shopee-box .txt{flex:1;min-width:0}
+.shopee-box h2{color:#fff;font-size:1.15rem;line-height:1.25}
+.shopee-box p{margin:2px 0 0;font-size:.95rem;line-height:1.4}
+.shopee-box .btn{flex:none}
+@media (max-width:760px){.shopee-box{flex-wrap:wrap;justify-content:center;text-align:center;padding:16px}.shopee-box .txt{flex:1 1 100%}.shopee-box .logo{display:none}.shopee-box .btn{width:100%}}
 .btn-white{background:#fff;color:var(--rose-dark);position:relative;z-index:1}
-@media (max-width:760px){.shopee-box{grid-template-columns:1fr;padding:32px 24px;text-align:center;justify-items:center}.shopee-box .tags{justify-content:center}.shopee-box .logo{width:100px;height:100px}.shopee-box .logo svg{width:64px;height:64px}}
 .way.featured{border-color:var(--rose);background:#fff;box-shadow:0 14px 30px rgba(199,45,93,.18);position:relative}
 .way .badge{position:absolute;top:-14px;background:var(--rose-600);color:#fff;font:800 .85rem var(--body);padding:4px 16px;border-radius:999px;letter-spacing:.04em}
 @media (min-width:901px){.way.featured{transform:scale(1.04)}.way.featured:hover{transform:scale(1.04) translateY(-6px)}}
@@ -264,10 +263,6 @@ dialog.lb::backdrop{background:rgba(58,38,34,.72)}
 
   /* Shopee */
   .shopee-sec{margin-top:44px}
-  .shopee-box{padding:28px 20px;gap:16px;border-radius:26px}
-  .shopee-box .btn{width:100%}
-  .shopee-box h2{font-size:1.6rem}
-  .shopee-box p{font-size:1.02rem}
 
   /* vitrine em carrossel */
   .grid{columns:auto;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:4px 2px 14px;margin:0 -16px;padding-inline:16px;scrollbar-width:none}
@@ -433,7 +428,7 @@ p{text-wrap:pretty}
   .hero-art{max-width:300px;margin-bottom:12px}
   .slide .cap{font-size:.8rem;padding:6px 12px;white-space:normal;text-align:center;border-radius:16px;width:max-content;max-width:104%;line-height:1.3}
   .slide .cap b{display:block;margin:0}
-  .hero-proof{font-size:.95rem;margin-top:16px}
+  .hero-proof{font-size:1rem;margin-top:16px;padding:12px 16px 14px}
   .mbar{position:fixed;left:0;right:0;bottom:0;z-index:36;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,248,250,.96);backdrop-filter:blur(8px);box-shadow:0 -6px 20px rgba(58,38,34,.14);transform:translateY(110%);transition:transform .35s ease}
   .mbar.show{transform:none}
   .mbar .btn{flex:1;min-height:52px;padding:.6rem .8rem}
