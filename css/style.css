@@ -466,7 +466,7 @@ p{text-wrap:pretty}
 @media (max-width:900px){.family .wrap{grid-template-columns:minmax(0,1fr)}}
 
 /* ---------- bastidores (só computador) ---------- */
-.behind{background:var(--cream)}
+.behind{background:var(--blush)}
 .bt-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
 .bt{margin:0;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s}
 .bt:hover{transform:translateY(-6px)}
