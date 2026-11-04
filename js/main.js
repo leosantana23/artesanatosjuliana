@@ -317,4 +317,17 @@
     else window.open('https://wa.me/?text=' + encodeURIComponent(data.text + ' ' + data.url), '_blank', 'noopener');
   });
   $('#ano').textContent = y;
+
+  /* ---------- bastidores: vídeos só tocam quando aparecem na tela ---------- */
+  var bts = $$('.bt video');
+  if (bts.length && hasIO && !reduce) {
+    var vio = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else v.pause();
+      });
+    }, { threshold: .4 });
+    bts.forEach(function (v) { vio.observe(v); });
+  }
 })();
