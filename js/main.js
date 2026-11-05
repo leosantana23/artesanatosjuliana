@@ -95,7 +95,7 @@
   });
   $$('#nav a').forEach(function (a) { a.addEventListener('click', closeMenu); });
   if (hasIO) {
-    var links = $$('#nav a');
+    var links = $$('#nav a[href^="#"]'); /* só os links internos (o da Shopee é externo) */
     var spy = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); }); });
     }, { rootMargin: '-40% 0px -55% 0px' });
@@ -149,6 +149,7 @@
   var cd = $('#cdText');
   if (days === 0) cd.textContent = 'Hoje é Natal! Feliz Natal a todos ♥';
   else if (days <= 120) cd.innerHTML = 'Faltam <b>' + days + '</b> dias para o Natal. Veja as guirlandas na vitrine';
+  else cd.closest('.countdown').hidden = true; /* fora da época de Natal, a pílula some */
 
   $('#anos').textContent = y - 2012;
   function count(el) {
