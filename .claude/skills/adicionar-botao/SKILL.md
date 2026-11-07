@@ -1,6 +1,6 @@
 ---
 name: adicionar-botao
-description: Adiciona e confere a funcionalidade do botão criado (direcionamento). Utilizar quando o usuário pedir para criar um botão e que teste sua funcionalidade (se direciona para o local pedido por ele).
+description: Adiciona e confere a funcionalidade do botão criado (direcionamento). Utilizar quando o usuário pedir para criar um botão.
 ---
 
 # Adicionar botão à landing page
