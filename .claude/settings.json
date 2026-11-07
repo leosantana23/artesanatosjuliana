@@ -6,6 +6,8 @@
       "Bash(git diff *)",
       "Bash(git log *)"
     ],
-    "deny": []
+    "deny": [
+      "Edit(./CLAUDE.md)"
+    ]
   }
 }
